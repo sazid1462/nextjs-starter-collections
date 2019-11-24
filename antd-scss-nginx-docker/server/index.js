@@ -100,14 +100,14 @@ const createServer = () => {
     return server;
 };
 
-const server = createServer();
+const index = createServer();
 app.prepare()
     .then(() => {
-        server.listen(port, (err) => {
+        index.listen(port, (err) => {
             if (err) throw err;
             console.log(`> Ready on http://localhost:${port}`);
         });
     });
 
 exports.app = app;
-exports.server = server;
+exports.server = index;
